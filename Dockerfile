@@ -1,16 +1,18 @@
-FROM node:18
+FROM node:22
 
 WORKDIR /app
 
-COPY backend/package*.json ./backend/
-COPY backend/prisma ./backend/prisma/
+# Salin seluruh file
+COPY . .
 
+# Masuk ke folder backend
 WORKDIR /app/backend
+
+# Install dependensi & generate Prisma
 RUN npm install
 RUN npx prisma generate
 
-COPY backend/ ./
-
 EXPOSE 5000
 
+# Jalankan server
 CMD ["npx", "tsx", "src/server.ts"]
