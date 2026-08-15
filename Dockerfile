@@ -15,4 +15,4 @@ RUN npx prisma generate
 EXPOSE 5000
 
 # Jalankan server
-CMD ["npx", "tsx", "src/server.ts"]
+CMD ["sh", "-c", "npx prisma db push && npm run dev"]
