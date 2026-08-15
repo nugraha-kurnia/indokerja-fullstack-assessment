@@ -16,7 +16,7 @@ export const JobDetail: React.FC = () => {
   useEffect(() => {
     const fetchJobDetail = async () => {
       try {
-        const res = await fetch('http://localhost:5000/api/jobs', {
+        const res = await fetch('https://indokerja-fullstack-assessment-production.up.railway.app/api/jobs', {
           headers: token ? { Authorization: `Bearer ${token}` } : {}
         });
         if (res.ok) {
@@ -44,7 +44,7 @@ export const JobDetail: React.FC = () => {
 
     setApplying(true);
     try {
-      const res = await fetch('http://localhost:5000/api/applications/apply', {
+      const res = await fetch('https://indokerja-fullstack-assessment-production.up.railway.app/api/applications/apply', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

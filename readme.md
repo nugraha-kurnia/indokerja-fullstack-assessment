@@ -134,4 +134,9 @@ GET,/api/applications/my-applications,Job Seeker,Mengambil daftar riwayat lamara
 GET,/api/applications/company/applicants,Company,Mengambil daftar seluruh kandidat pelamar
 PUT,/api/applications/:id/status,Company,Mengubah status lamaran kandidat seleksi
 
-🧪 Kredensial Akun untuk Pengujian (Testing Credentials)Untuk mempermudah proses evaluasi aplikasi:  Akun Job Seeker:Email: nugrahadaring@gmail.comRole: JOB_SEEKERAkun Company / Recruiter:Email: qiscom@gmail.com (atau email perusahaan yang kamu gunakan)Role: COMPANY👨‍💻 DeveloperNama: Muhammad Nugraha KurniaPosisi: Full Stack Developer CandidatePlatform: IndoKerja.id Assessment
+🧪 Kredensial Akun untuk Pengujian (Testing Credentials)Untuk mempermudah proses evaluasi aplikasi:  
+Akun Job Seeker:Email: nugrahadaring@gmail.com  pw: Admin123 Role: JOB_SEEKER
+
+Akun Company / Recruiter:Email: qiscom@gmail.com pw: admin
+
+ (atau email perusahaan yang kamu gunakan)Role: COMPANY👨‍💻 DeveloperNama: Muhammad Nugraha KurniaPosisi: Full Stack Developer CandidatePlatform: IndoKerja.id Assessment

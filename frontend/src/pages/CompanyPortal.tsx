@@ -69,7 +69,7 @@ export const CompanyPortal: React.FC = () => {
     if (!token) return;
     setLoading(true);
     try {
-      const res = await fetch('http://localhost:5000/api/jobs/company/my-jobs', {
+      const res = await fetch('https://indokerja-fullstack-assessment-production.up.railway.app/api/jobs/company/my-jobs', {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (res.ok) {
@@ -107,8 +107,8 @@ export const CompanyPortal: React.FC = () => {
     e.preventDefault();
     try {
       const url = editingJobId
-        ? `http://localhost:5000/api/jobs/${editingJobId}`
-        : 'http://localhost:5000/api/jobs';
+        ? `https://indokerja-fullstack-assessment-production.up.railway.app/api/jobs/${editingJobId}`
+        : 'https://indokerja-fullstack-assessment-production.up.railway.app/api/jobs';
       const method = editingJobId ? 'PUT' : 'POST';
 
       const res = await fetch(url, {
@@ -150,7 +150,7 @@ export const CompanyPortal: React.FC = () => {
   const handleDeleteJob = async (jobId: string, title: string) => {
     if (window.confirm(`Yakin ingin menghapus lowongan "${title}"?`)) {
       try {
-        const res = await fetch(`http://localhost:5000/api/jobs/${jobId}`, {
+        const res = await fetch(`https://indokerja-fullstack-assessment-production.up.railway.app/api/jobs/${jobId}`, {
           method: 'DELETE',
           headers: { Authorization: `Bearer ${token}` },
         });
@@ -170,7 +170,7 @@ export const CompanyPortal: React.FC = () => {
   // Handler Update Status Pelamar (Reviewing, Shortlisted, Accepted, Rejected)
   const handleUpdateApplicantStatus = async (appId: string, newStatus: string) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/applications/${appId}/status`, {
+      const res = await fetch(`https://indokerja-fullstack-assessment-production.up.railway.app/api/applications/${appId}/status`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
