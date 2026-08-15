@@ -8,7 +8,14 @@ import applicationRoutes from './routes/application.routes';
 dotenv.config();
 
 const app = express();
-app.use(cors());
+
+// Konfigurasi CORS lengkap & handle Preflight OPTIONS
+app.use(cors({
+  origin: '*',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
+app.options('*', cors());
 
 // WAJIB DI SINI POSISINYA (Sebelum Routes!)
 app.use(express.json({ limit: '50mb' }));
